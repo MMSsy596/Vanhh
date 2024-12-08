@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vân Anhh công chúa</title>
+    <link rel="shortcut icon" href="../Asset/2/12.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href=" main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="css2" rel="stylesheet">
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background: #c78484;
+  overflow: hidden;
+  color: white;
+}
+
+.gallery {
+  --size: 250px;
+  --gap: .5rem;
+  --grid-cols: var(--size) var(--size) var(--size);
+  --grid-rows: var(--size) var(--size) var(--size);
+  --size-hover: calc(var(--size) * 2);
+  --size-not-hover: calc(var(--size) / 2);
+  --speed: 500ms;
+
+  width: 100%;
+  width: 800px;
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+  transition: var(--speed) ease-in-out;
+  gap: var(--gap);
+}
+
+.gallery>div {
+  height: fit-content;
+  display: grid;
+  grid-template-rows: var(--grid-rows);
+  gap: var(--gap);
+  transition: var(--speed) ease-in-out;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(75%);
+  transition: filter var(--speed);
+}
+
+img:hover {
+  filter: sepia(0);
+}
+
+.gallery:has(>div:nth-child(1):hover) {
+  --grid-cols: var(--size-hover) var(--size-not-hover) var(--size-not-hover);
+}
+
+.gallery:has(>div:nth-child(2):hover) {
+  --grid-cols: var(--size-not-hover) var(--size-hover) var(--size-not-hover);
+}
+
+.gallery:has(>div:nth-child(3):hover) {
+  --grid-cols: var(--size-not-hover) var(--size-not-hover) var(--size-hover);
+}
+
+.gallery>div:has(>img:nth-child(1):hover) {
+  --grid-rows: var(--size-hover) var(--size-not-hover) var(--size-not-hover);
+}
+
+.gallery>div:has(>img:nth-child(2):hover) {
+  --grid-rows: var(--size-not-hover) var(--size-hover) var(--size-not-hover);
+}
+
+.gallery>div:has(>img:nth-child(3):hover) {
+  --grid-rows: var(--size-not-hover) var(--size-not-hover) var(--size-hover);
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="gallery">
+    <div>
+      <img src="../Asset/2/1.jpg" alt="">
+      <img src="../Asset/2/2.jpg" alt="">
+      <img src="../Asset/2/12.jpg" alt="">
+    </div>
+    <div>
+      <img src="../Asset/2/3.jpg" alt="">
+      <img src="../Asset/2/5.jpg" alt="">
+      <img src="../Asset/2/6.jpg" alt="">
+    </div>
+    <div>
+      <img src="../Asset/2/13.jpg" alt="">
+      <img src="../Asset/2/8.jpg" alt="">
+      <img src="../Asset/2/9.jpg" alt="">
+    </div>
+  </section>
+
+</body>
+
+
+
+</html>

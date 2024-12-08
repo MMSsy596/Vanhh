@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vân Anhh công chúa</title>
+    <link rel="shortcut icon" href="../Asset/2/12.jpg" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+     body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    transition: .25s;
+    background: #c78484;
+    color: rgb(255, 0, 0);
+}
+
+.credit {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: inherit;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+    height: 400px;
+}
+
+.option {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    background: var(--optionBackground, #c78484);
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+}
+
+.option.active .shadow {
+    box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+}
+
+.option.active .label {
+    bottom: 20px;
+    left: 20px;
+}
+
+.option:not(.active) {
+    flex-grow: 1;
+    border-radius: 30px;
+}
+
+.option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+
+.option:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.label {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 40px;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    white-space: pre;
+}
+
+.info > div {
+    position: relative;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+}
+
+.main {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sub {
+    transition-delay: .1s;
+}
+.credit {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #fd23c7 100%);
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: all 0.2s ease-in-out;
+}
+
+.credit:hover {
+  transform: translateY(-5px); /* Nhấc lên khi hover */
+  box-shadow: 0 6px 16px rgba(248, 4, 126, 0.57); /* Tăng độ đổ bóng */
+}
+
+.credit:active {
+  transform: translateY(3px); /* Hạ xuống nhẹ khi nhấn */
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <div class="options">
+        <div class="option active" style="--optionBackground:url(https://lh3.googleusercontent.com/pw/AP1GczMYTi4KfV0ZraFqPL2wtVE6_KJ4Z405A_UANLy6vi5EOrRhcMIwS13YIa1tU8jcdyBTX1qNO0QkTrmJZF79Jbgtl9Gef21-iXuJyJPnZxw9mf1iZTTDG8JCSoL78PrSpsCkjg-1T3Asxz-jJk3aQjpCmA=w751-h1008-s-no-gm?authuser=0);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-walking"></i>
+                </div>
+                <div class="info">
+                    <div class="main">2 tháng 12 lúc 11:28  </div>
+                    <div class="sub">Be truthful, it’s beautiful 😚</div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://lh3.googleusercontent.com/pw/AP1GczO1B83xe4_9p9xjgxfVlQoD9JkFXXMkt0aRqYVjD39UKduMGSRS6CxZP0Sfv6_-v3mKEg26HIPGGK99sGEtLURdGqXHIXxPjnaD7URsm05KFI113-eBuUTv43w-wt2Ce4u6s0_lSu4egb2orueD2VEyzg=w683-h772-s-no-gm?authuser=0);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-walking"></i>
+                </div>
+                <div class="info">
+                    <div class="main"> 19 tháng 6 </div>
+                    <div class="sub"> 👉🎂</div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://lh3.googleusercontent.com/pw/AP1GczN0DdfGHrGwU8hb6q9egOT1pKZMmuAUfMoAwtYtcLG9BgAijZ9Y-rLhVEOh9ZkL5_6uM4Zr76HgW-iRwYxOu42FnKBDBiUpciwh9QcCQbUbCO4A89EmUJ3ofkaOrMwHSRCKlwa1Uhf-SxlCKcrjEN-4Pg=w756-h1008-s-no-gm?authuser=0);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-tree">
+                        
+                    </i>
+                </div>
+                <div class="info">
+                    <div class="main">17 tháng 9, 2023 </div>
+                    <div class="sub">Nhan sắc có hạn nên chỉ xem anh là bạn😌</div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://lh3.googleusercontent.com/pw/AP1GczNGDuFZiUdgKDVHpdWRChcoISet0ZdgUSbh_9CEq7kcmyqwkNE_RnN_zyzI7_dPyMcIiG8RIIBRVWXw3YI21qrQsZfXppI_V8lP5TiPneq5k9xmSB7IjFGpnBD9bLN5BcYJ5vLmHJ0NDFLqAumL3zonmw=w526-h701-s-no-gm?authuser=0);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-tint"
+                     src="https://lh3.googleusercontent.com/pw/AP1GczNGDuFZiUdgKDVHpdWRChcoISet0ZdgUSbh_9CEq7kcmyqwkNE_RnN_zyzI7_dPyMcIiG8RIIBRVWXw3YI21qrQsZfXppI_V8lP5TiPneq5k9xmSB7IjFGpnBD9bLN5BcYJ5vLmHJ0NDFLqAumL3zonmw=w526-h701-s-no-gm?authuser=0" alt="Image 1">></i>
+                </div>
+                <div class="info">
+                    <div class="main">24 tháng 5, 2023  </div>
+                    <div class="sub">Cuộc sống nên tươi đẹp và nhẹ nhàng, 
+                        em cũng vậy 🤍</div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://lh3.googleusercontent.com/pw/AP1GczOhjl66WLuFH8xwDcGJMZlb_ESbikr-6CdaYiaV8kcSLlQ1b6rpAygzdzyvBlZEx__YoWsaA22RglXgIbBaF4hQsQa-3SFgqTKyMg_iLNKtt-DWhy9iXDzapt2yJy4iroAJmOMeRK4TKhqpeHE-VIxSkQ=w680-h790-s-no-gm?authuser=0);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="info">
+                    <div class="main">29 tháng 4, 2023 </div>
+                    <div class="sub">Nói thật nhiều lúc em hơi quá, 
+                        quá là xinhhh! 🤪🤪</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://www.facebook.com/profile.php?id=100010455797235" target="_blank" class="credit">Photos from this profile</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".option").click(function(){
+                $(".option").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+</body>
+</html>

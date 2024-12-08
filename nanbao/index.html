@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author</title>
+  <link rel="shortcut icon" href="../Asset/nanbao/1.jpg" type="image/x-icon">
+
+  <link rel="stylesheet" href="main.css">
+  <style>
+
+    :root {
+      --outerYearSpacing: 35px;
+      --cardWidth: 655px;
+      --cardHeight: 342px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fee1e1;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+    }
+    
+    .wrapper {
+      height: var(--cardHeight);
+      width: var(--cardWidth);
+    }
+    
+    .card {
+      width: var(--cardWidth);
+      height: var(--cardHeight);
+      background-image: url("https://codetheworld.io/wp-content/uploads/2023/10/yLGWbzj_bg.png");
+      background-size: cover;
+      border-radius: 5px;
+      position: absolute;
+      box-shadow: -20px 30px 116px 0 rgba(92, 15, 15, 0.54);
+      overflow: hidden;
+      z-index: 4;
+    }
+    
+    .year {
+      color: #fa0000d8;
+      font-family: "Oswald", sans-serif;
+      text-align: center;
+      font-size: 80px;
+      line-height: 110px;
+      padding: 15px 0;
+      font-weight: 100;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .comet-outer {
+      position: absolute;
+      top: 30%;
+      left: 25%;
+    }
+    
+    .comet {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border-radius: 100%;
+    }
+    
+    .comet-second {
+      right: -30px;
+      top: -15px;
+      transform: scale(0.6);
+    }
+    
+    .comet:before,
+    .comet:after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 27%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      left: 0;
+      top: 0;
+      border-radius: 20px;
+      transform: rotate(-45deg);
+    }
+    
+    .comet:before {
+      width: 18px;
+      height: 70px;
+      transform-origin: -2px 13px;
+    }
+    
+    .comet:after {
+      width: 12px;
+      height: 80px;
+      transform-origin: 0px 8px;
+    }
+    
+    .circle,
+    .small-circle {
+      position: absolute;
+      background-image: linear-gradient(-239deg, #0ee920 0%, #242a48 59%);
+      box-shadow: -10px -15px 90px 0 #464c9b;
+      border-radius: 100%;
+      z-index: 2;
+    }
+    
+    .circle {
+      right: 40px;
+      bottom: 10px;
+      width: 230px;
+      height: 230px;
+      background-image: url("https://lh3.googleusercontent.com/pw/AP1GczM6jg2i6bWx9I5XVNl05ChzDoA-tXq0yHawwEG1cA4kzEWS6hqrsDdCJa7j9XRJ7OJfUxOaP-zeVB1f80d7nXThZVWTFRSQ9qxXxLzIqoBDh5FVRuBQKm-jWkZzvQ5fWinvIxIKaZgK_vPCQmnV5VwyuA=w215-h215-s-no-gm?authuser=0");
+
+    }
+    
+    .small-circle {
+      right: 40%;
+      top: -7%;
+      width: 50px;
+      height: 50px;
+    }
+    
+    .orange-shine,
+    .green-shine {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* .orange-shine {
+      width: 570px;
+      height: 500px;
+      background-image: url("https://codetheworld.io/wp-content/uploads/2023/10/yLGWbzj_orange_shine.png");
+      right: -150px;
+      top: -90px;
+      bottom: 50px;
+      z-index: 2;
+    } */
+    
+    .green-shine {
+      width: 400px;
+      background-image: url("https://codetheworld.io/wp-content/uploads/2023/10/yLGWbzj_green_shine.png");
+      left: 20%;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    
+    .thank-you {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: "Oswald", sans-serif;
+      position: absolute;
+      text-transform: uppercase;
+      font-weight: 100;
+      left: 30%;
+      bottom: 20%;
+      letter-spacing: 5px;
+      line-height: 17px;
+      font-size: 16px;
+      z-index: 2;
+    }
+    
+    .outer-year {
+      font-family: "Orbitron";
+    }
+    
+    .outer-year span {
+      color: #fff;
+      position: absolute;
+      font-size: 20px;
+      z-index: 4;
+    }
+    
+    .outer-year span:nth-child(1),
+    .outer-year span:nth-child(2) {
+      top: var(--outerYearSpacing);
+    }
+    
+    .outer-year span:nth-child(2),
+    .outer-year span:nth-child(4) {
+      right: var(--outerYearSpacing);
+    }
+    
+    .outer-year span:nth-child(3),
+    .outer-year span:nth-child(4) {
+      bottom: var(--outerYearSpacing);
+    }
+    
+    .outer-year span:nth-child(1),
+    .outer-year span:nth-child(3) {
+      left: var(--outerYearSpacing);
+    }
+    
+    .outer-year span:nth-child(1):after,
+    .outer-year span:nth-child(4):after {
+      content: "";
+      border-bottom: 2px solid #fff;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="year">Thanks!<br /></div>
+      <div class="comet-outer">
+        <div class="comet"></div>
+        <div class="comet comet-second"></div>
+      </div>
+      <div class="circle"></div>
+      <div class="small-circle"></div>
+      <div class="orange-shine"></div>
+      <div class="green-shine"></div>
+      <div class="thank-you">
+        Happy<br />birthday
+      </div>
+      <div class="outer-year">
+        <span>2</span>
+        <span>0</span>
+        <span>2</span>
+        <span>4</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

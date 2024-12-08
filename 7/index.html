@@ -1,0 +1,67 @@
+<style>
+    /* Tiktok @CodeTheWorld */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #556270;
+  animation: bg-anim 9s infinite;
+}
+
+@keyframes bg-anim {
+  0%,3%   {background: #774F38}
+  14%,19% {background: #C5E0DC}
+  31%,36% {background: #036564}
+  45%,55% {background: #B38184}
+  64%,69% {background: #424254}
+  81%,86% {background: #4DBCE9}
+  97%,to  {background: #774F38}
+}
+
+.gallery {
+  --size: 380px;
+  --perspective: perspective(calc(2.5*var(--size)));
+  
+  display: grid;
+  transform-style: preserve-3d;
+  animation: rotate-anim 9s infinite cubic-bezier(.5,-0.5,.5,1.5);
+}
+
+img {
+  grid-area: 1/1;
+  width: var(--size);
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: 
+    var(--rotate, )
+    translateZ(calc(var(--size)/2));
+  position: relative;
+}
+
+img:nth-child(2) {--rotate: rotateX(-90deg)}
+img:nth-child(3) {--rotate: rotateY( 90deg) rotate(-90deg)}
+img:nth-child(4) {--rotate: rotateX(180deg) rotate( 90deg)}
+img:nth-child(5) {--rotate: rotateX( 90deg) rotate( 90deg)}
+img:nth-child(6) {--rotate: rotateY(-90deg)}
+
+@keyframes rotate-anim {
+  0%,3%   {transform: var(--perspective)}
+  14%,19% {transform: var(--perspective) rotateX(90deg)}
+  31%,36% {transform: var(--perspective) rotateX(90deg) rotateZ(90deg)}
+  47%,52% {transform: var(--perspective) rotateX(90deg) rotateZ(90deg) rotateY(-90deg)}
+  64%,69% {transform: var(--perspective) rotateX(90deg) rotateZ(90deg) rotateY(-90deg) rotateX(90deg)}
+  81%,86% {transform: var(--perspective) rotateX(90deg) rotateZ(90deg) rotateY(-90deg) rotateX(90deg) rotateZ(90deg)}
+  97%,100%{transform: var(--perspective) rotateX(90deg) rotateZ(90deg) rotateY(-90deg) rotateX(90deg) rotateZ(90deg) rotateY(-90deg)}
+}
+</style>
+
+<div class="gallery">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100016.jpg">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100072.jpg">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100039.jpg">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100036.jpg">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100027.jpg">
+  <img src="https://www.daisangoku.com/pc/gw/20210419172928/data/role/card_watermark_100015.jpg">
+</div>
